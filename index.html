@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./responsive.css">
+    <link rel="shortcut icon" href="./images/clouded_318-368363.png" type="image/x-icon">
+    <title>Weather App</title>
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <!-- ________________COMMON CONTAINER_______________ -->
+        <div class="common-container">
+            <h1>WEATHER APP</h1>
+            <div class="switch-container">
+                <button class="your-weather">Your Weather</button>
+                <button class="search-weather">Search Weather</button>
+            </div>
+        </div>
+        <div class="whole-container">
+            <!-- ________________LOCATION CONTAINER____________________ -->
+            <div class="location-container" id="location-container">
+                <img src="./images/location.png" alt="no-image">
+                <div>
+                    <h2 class="location-heading">Grant Location Access</h2>
+                    <p class="location-para">Allow Access To Get Weather Information</p>
+                </div>
+                <button class="location-button">GRANT ACCESS</button>
+            </div>
+            <!-- __________________LOADING CONTAINER_________________ -->
+            <div class="loading-container" id="loading-container">
+                <img src="./images/loading.gif" alt="no-loading">
+                <h2>loading...</h2>
+            </div>
+            <!-- _________________MAIN CONTAINER________________ -->
+            <div class="main-container" id="main-container">
+                <div class="place-flag">
+                    <div class="place-name">{prayagraj}</div>
+                    <img class="flag" src="./images/flag.webp" alt="no-flag">
+                </div>
+                <div class="weather-condition">{cloudy}</div>
+                <img src="./images/not-found.png" alt="" class="weather-image">
+                <div class="temp-info">
+                    <span class="temperature">{50 C}</span>
+                    <span>&#x2103;</span>
+                </div>
+                <div class="cards">
+                    <div class="card1 common-card">
+                        <img src="./images/wind.png" alt="no-wind" class="wind-image">
+                        <p>WINDSPEED</p>
+                        <div>
+                            <span class="wind-speed">{1.5km/s}</span>
+                            <span>m/s</span>
+                        </div>
+                    </div>
+                    <div class="card2 common-card">
+                        <img src="./images/humidity.png" alt="no-humidity" class="humidity-image">
+                        <p>HUMIDITY</p>
+                        <div>
+                            <span class="humidity">{55%}</span>
+                            <span>%</span>
+                        </div>
+                    </div>
+                    <div class="card3 common-card">
+                        <img src="./images/cloud.png" alt="no-cloud" class="cloud-image">
+                        <p>CLOUDS</p>
+                        <div>
+                            <span class="clouds">{0%}</span>
+                            <span>%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- _________________SEARCH CONTAINER___________________ -->
+            <div class="search-container" id="search-container">
+                <div class="inner-search-container">
+                    <input class="city-input" type="text" placeholder="Search for city">
+                    <button class="magnifier">
+                        <img src="./images/search.png" alt="">
+                    </button>
+                </div>
+            </div>
+            <!-- ___________________NOT FOUND__________________ -->
+            <div class="not-found-container" id="not-found-container">
+                <img src="./images/not-found.png" alt="no-image">
+                <p>City Not Found</p>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

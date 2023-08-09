@@ -1,0 +1,234 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    color: rgba(255, 255, 255, 0.9);
+    font-family: poppins, sans-serif;
+
+
+    background: rgb(9,9,121);
+    background: linear-gradient(0deg, rgba(9,9,121,1) 0%, rgba(0,212,255,0.75) 100%);
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+#location-container{
+    /* border: 2px solid red; */
+    display: none;
+}
+#loading-container{
+    /* border: 2px solid orange; */
+    display: none;
+}
+#main-container{
+    /* border: 2px solid brown; */
+    display: none;
+}
+#search-container{
+    /* border: 2px solid green; */
+    display: none;
+}
+#not-found-container{
+    /* border: 2px solid purple; */
+    display: none;
+}
+button{
+    cursor: pointer;
+}
+/* _______________________common container styling________________________ */
+.common-container{
+    margin-top: 1rem;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.common-container > h1{
+    text-align: center;
+}
+.switch-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+.your-weather, .search-weather{
+    border-style: none;
+    background: inherit;
+    color: inherit;
+
+    font-size: 1rem;
+}
+/* isme button click pr background aane wali styling baaki hai */
+
+/* ________________________location container styling______________________ */
+
+.location-container{
+    margin-top: 2rem;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+.location-container > img{
+    width: 8rem;
+}
+.location-heading{
+    font-size: 2rem;
+}
+.location-button{
+    border-style: none;
+    color: inherit;
+    background-color: rgba(255, 255, 255, 0.3);
+
+    padding: 0.5rem 1rem;
+}
+/* _____________________loading container styling______________________ */
+
+.loading-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* gap: 1rem; */
+}
+.loading-container > img{
+    width: 20%;
+}
+/* _______________________main container styling________________________ */
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    padding: 1rem;
+}
+.place-flag{
+    display: flex;
+    gap: 1rem;
+}
+.flag{
+    width: 2rem;
+}
+.weather-image{
+    width: 4rem;
+}
+.temperature{
+    font-size: 2rem;
+    font-weight: 600;
+    /* border: 2px solid gold; */
+}
+.temp-info > span:last-of-type {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.cards{
+    display: flex;
+    gap: 1rem;
+}
+.common-card{
+    /* border: 2px solid silver; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+
+    padding: 0.5rem 2rem;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.common-card > img{
+    width: 90%;
+}
+/* ___________________search container styling___________________ */
+
+.search-container{
+    display: flex;
+    justify-content: center;
+
+    margin-top: 1rem;
+    padding: 1rem;
+}
+.inner-search-container{
+    width: 60vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;  /*added*/
+
+    gap: 2rem;
+}
+.city-input{
+    max-width: 90%;
+    width: 60%;
+    border: none;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    outline: none;
+    color: inherit;
+}
+.city-input::placeholder{
+    color: rgba(255, 255, 255, 0.9);
+}
+.magnifier{
+    height: 2rem;
+    width: 2rem;
+    border-style: none;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    background-color: rgb(17, 125, 214);
+    padding: 0.4rem;
+    object-position: center;
+}
+.magnifier > img{
+    width: 100%;
+}
+/* _______________________not found styling______________________ */
+
+.not-found-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    padding: 1rem;
+    margin-top: 1rem;
+}
+.not-found-container > img{
+    width: 15rem;
+}
+.not-found-container > p{
+    font-size: 1.5rem;
+}
+
+#active{
+    display: flex;
+}
+#inactive{
+    display: none;
+}
+
+/* ___________________________________________________________ */
+
+.on-click-styling{
+    padding: 0.2rem 0.5rem;
+    background-color: rgba(219, 226, 239, 0.4);
+    /* background-color: rgba(15, 112, 133, 0.5); */
+    border-radius: 0.3rem;
+}
+
+/* .switch-container > .your-weather{
+    
+    padding: 0.5rem;
+    background-color: rgba(219, 226, 239, 0.5);
+    border-radius: 0.5rem;
+} */
