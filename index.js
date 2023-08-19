@@ -35,7 +35,7 @@ async function fetchUserWeatherInfo(coordinates){
     try{
         const response = await fetch(
             // `http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=d4a79d3c8130df1bfca65000d5e07232`
-            `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&APPID=d4a79d3c8130df1bfca65000d5e07232&units=metric`
+            `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&APPID=cb70177913d19ad6aa12598d31929ef6&units=metric`
             //https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&exclude={part}&appid={API key}
         )
         const data = await response.json()
@@ -82,7 +82,7 @@ function renderWeatherInfo(weatherInfo){
 // _____________________grant access button
 
 const locationAccessBtn = document.querySelector(".location-button")
-// getFromSessionStorage()
+getFromSessionStorage()
 
 locationAccessBtn.addEventListener("click", getLocation)
 function getLocation(){
@@ -127,7 +127,7 @@ async function fetchSearchWeatherInfo(city){
 
     try{
         let response = await fetch(
-            `http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=d4a79d3c8130df1bfca65000d5e07232&units=metric`
+            `http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=cb70177913d19ad6aa12598d31929ef6&units=metric`
         )
             const data = await response.json()
             loadingCnt.setAttribute("id", "inactive")
